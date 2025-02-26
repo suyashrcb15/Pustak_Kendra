@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* General Layout */
+    .admin-container {
+        @apply flex w-[calc(100%-264px)] flex-1 flex-col bg-gray-50 p-5 xs:p-10 shadow-lg;
+    }
+
+    /* Back Button */
+    .back-btn {
+        @apply mb-10 w-fit border border-gray-200 bg-gradient-to-r from-blue-500 to-blue-700 text-xs font-medium text-white
+        hover:from-blue-600 hover:to-blue-800 transition-all duration-300 shadow-md;
+    }
+
+    /* Confirmation Dialog */
+    .confirm-trigger {
+        @apply font-semibold text-sm shadow-none hover:bg-opacity-80 w-full bg-blue-500 text-white rounded-lg transition-all duration-300;
+    }
+
+    .confirm-approve {
+        @apply bg-green-500 text-white hover:bg-green-600 transition-all duration-300;
+    }
+
+    .confirm-reject {
+        @apply bg-red-500 text-white hover:bg-red-600 transition-all duration-300;
+    }
+
+    .confirm-content {
+        @apply sm:max-w-md flex flex-col items-center justify-center p-6 bg-white shadow-lg rounded-lg;
+    }
+
+    .confirm-illustration {
+        @apply size-28 rounded-full flex justify-center items-center mx-auto bg-blue-100;
+    }
+
+    .confirm-illustration div:first-child {
+        @apply size-[70%] rounded-full flex justify-center items-center bg-blue-200;
+    }
+
+    .confirm-btn {
+        @apply w-full min-h-14 rounded-xl font-bold text-base bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300;
+    }
+
+    /* Book Form */
+    .book-form_input {
+        @apply min-h-14 border border-gray-300 bg-gray-100 p-4 text-base font-semibold placeholder:text-gray-500 rounded-md;
+    }
+
+    .book-form_btn {
+        @apply min-h-14 w-full bg-gradient-to-r from-purple-500 to-purple-700 text-white
+        hover:from-purple-600 hover:to-purple-800 transition-all duration-300 shadow-md rounded-md;
+    }
+
+    /* Home Page */
+    .view-btn {
+        @apply bg-gray-200 rounded-md text-blue-700 font-semibold hover:bg-gray-300 transition-all duration-300;
+    }
+
+    .add-new-book_btn {
+        @apply mt-7 mb-3 bg-blue-50 py-4 px-3 flex flex-row items-center rounded-xl gap-4 hover:bg-blue-100 transition-all;
+    }
+
+    .add-new-book_btn div:first-child {
+        @apply size-12 bg-white rounded-full flex justify-center items-center shadow-md;
+    }
+
+    .add-new-book_btn p:first-child {
+        @apply font-semibold text-lg text-gray-700;
+    }
+
+    /* Statistics */
+    .stat {
+        @apply bg-white rounded-xl p-5 space-y-5 flex-1 shadow-md;
+    }
+
+    .stat-info {
+        @apply flex justify-between items-center gap-5;
+    }
+
+    .stat-label {
+        @apply font-medium text-base text-gray-500 whitespace-nowrap;
+    }
+
+    .stat-count {
+        @apply font-semibold text-3xl text-gray-800;
+    }
+
+    /* Book Stripe */
+    .book-stripe {
+        @apply flex flex-row gap-4 bg-gray-200 p-4 rounded-lg shadow-sm;
+    }
+
+    .book-stripe .title {
+        @apply font-semibold text-base text-gray-800;
+    }
+
+    .book-stripe .author p:first-child {
+        @apply text-gray-500 text-sm;
+    }
+
+    .book-stripe .author div {
+        @apply size-1 rounded-full bg-gray-500;
+    }
+
+    .book-stripe .user .avatar p {
+        @apply text-xs text-gray-600;
+    }
+
+    .book-stripe .borrow-date p {
+        @apply text-xs text-gray-600;
+    }
+
+    /* Color Picker */
+    .color-picker {
+        @apply flex min-h-14 flex-row items-center gap-3 rounded-md border border-gray-300 bg-white p-4
+        text-base font-semibold text-gray-700 shadow-sm;
+    }
+
+    .hex-input {
+        @apply flex-1 bg-transparent outline-none text-gray-800;
+    }
+
+    .hex-color-picker {
+        @apply absolute left-0 top-full z-50 mt-3 bg-white shadow-lg rounded-lg;
+    }
+
+    /* Error Fallback */
+    .error-fallback {
+        @apply p-4 bg-red-100 text-red-700 rounded-md shadow-sm;
+    }
+
+    .error-fallback h2 {
+        @apply text-lg font-semibold mb-2;
+    }
+
+    /* Header */
+    .admin-header {
+        @apply flex lg:items-end items-start justify-between lg:flex-row flex-col gap-5 sm:mb-10 mb-5;
+    }
+
+    /* Search */
+    .admin-search {
+        @apply flex border border-gray-300 min-h-14 items-center gap-2 rounded-md bg-white px-4 lg:max-w-md w-full shadow-sm;
+    }
+
+    .admin-search_input {
+        @apply w-full border-0 shadow-none bg-transparent outline-none focus:ring-0;
+    }
+
+    /* Sidebar */
+    .admin-sidebar {
+        @apply sticky left-0 top-0 flex h-dvh flex-col justify-between bg-white px-5 pb-5 pt-10 shadow-lg;
+    }
+
+    .admin-sidebar .logo {
+        @apply flex flex-row items-center gap-2 border-b border-dashed border-blue-300 pb-10;
+    }
+
+    .admin-sidebar .logo h1 {
+        @apply text-2xl font-semibold text-light-200;
+    }
+
+    .admin-sidebar .link {
+        @apply flex flex-row items-center w-full gap-2 rounded-lg px-5 py-3.5 text-gray-700 hover:bg-blue-50 transition-all;
+    }
+
+    .admin-sidebar .link p {
+        @apply text-base font-medium;
+    }
+
+    .admin-sidebar .user {
+        @apply my-8 flex w-full flex-row gap-2 rounded-full border border-gray-300 px-6 py-2 shadow-md bg-gray-100;
+    }
+
+    /* User Card */
+    .user-card {
+        @apply w-40 bg-gray-200 py-4 px-3 flex justify-center items-center flex-col rounded-xl text-center shadow-sm;
+    }
+
+    .user-card .name {
+        @apply font-medium mt-3 text-gray-800;
+    }
+
+    .user-card .email {
+        @apply text-gray-200 text-sm;
+    }
+}

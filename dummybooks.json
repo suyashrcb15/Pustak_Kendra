@@ -1,0 +1,62 @@
+[
+  {
+    "id": "9084986f-456c-449b-ae6e-59ef1f26b129",
+    "title": "CSS in Depth",
+    "author": "Keith J. Grant",
+    "genre": "Web Development",
+    "rating": 4,
+    "coverUrl": "https://ik.imagekit.io/pwd17k26p/books/covers/file_zIgYlIxcY.png",
+    "coverColor": "#1e2a4b",
+    "description": "CSS in Depth by Keith J. Grant is a comprehensive guide for web developers who want to go beyond the basics of CSS and master the intricacies of styling web pages. The book is designed for intermediate to advanced developers who are already familiar with CSS but want to deepen their understanding and leverage its full potential.",
+    "totalCopies": 18,
+    "availableCopies": 16,
+    "videoUrl": "https://ik.imagekit.io/pwd17k26p/books/videos/file_O-O0Z_Vz5.png",
+    "summary": "CSS in Depth starts by reviewing the basic principles of CSS, then quickly moves on to more advanced concepts...",
+    "pdfUrl": "https://dl.ebooksworld.ir/motoman/Manning.CSS.in.Depth.www.EBooksWorld.ir.pdf"
+  },
+  {
+    "id": "350c3bc8-a5cc-45a3-ba16-97b93ed056b0",
+    "title": "HTML and CSS: Design and Build Websites",
+    "author": "Jon Duckett",
+    "genre": "Web Development",
+    "rating": 5,
+    "coverUrl": "https://ik.imagekit.io/pwd17k26p/books/covers/file_1pCoBDI11.png",
+    "coverColor": "#3a2931",
+    "description": "Whether you’re a complete beginner or someone looking to brush up on HTML and CSS, this book provides a solid foundation...",
+    "totalCopies": 45,
+    "availableCopies": 45,
+    "videoUrl": "https://ik.imagekit.io/pwd17k26p/books/videos/file_MONyhmpr4V.png",
+    "summary": "HTML and CSS: Design and Build Websites starts with an introduction to HTML, covering the basic building blocks...",
+    "pdfUrl": "https://wtf.tw/ref/duckett.pdf"
+  },
+  {
+    "id": "b514f922-a715-45ec-846e-e51d40e15aa2",
+    "title": "System Design Interview",
+    "author": "Alex Xu",
+    "genre": "System Design",
+    "rating": 5,
+    "coverUrl": "https://ik.imagekit.io/pwd17k26p/books/covers/file_CmVaNeXrQ.png",
+    "coverColor": "#363b63",
+    "description": "System Design Interview: An Insider's Guide by Alex Xu is a must-read for software engineers...",
+    "totalCopies": 10,
+    "availableCopies": 10,
+    "videoUrl": "https://ik.imagekit.io/pwd17k26p/books/videos/file_x_vGP6M7Y.png",
+    "summary": "System Design Interview: An Insider's Guide begins by introducing the key concepts of system design...",
+    "pdfUrl": "https://bytes.usc.edu/~saty/courses/docs/data/SystemDesignInterview.pdf"
+  },
+  {
+    "id": "b4ed06bf-02b2-42c4-8886-b3847af02cca",
+    "title": "Computer Science Distilled",
+    "author": "Wladston Ferreira Filho",
+    "genre": "Computer Science",
+    "rating": 5,
+    "coverUrl": "https://ik.imagekit.io/pwd17k26p/books/covers/file_ZRyGl0A75A.png",
+    "coverColor": "#73d173",
+    "description": "Computer Science Distilled by Wladston Ferreira Filho is a concise and approachable introduction...",
+    "totalCopies": 89,
+    "availableCopies": 87,
+    "videoUrl": "https://ik.imagekit.io/pwd17k26p/books/videos/file_W6XGeHaEO.png",
+    "summary": "Computer Science Distilled begins by explaining the art of problem-solving in computing...",
+    "pdfUrl": "https://cse.unl.edu/~cbourke/ComputerScienceOne.pdf"
+  }
+]

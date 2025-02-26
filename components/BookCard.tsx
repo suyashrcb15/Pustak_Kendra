@@ -1,29 +1,40 @@
+"use client";
+
 import React from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import BookCover from "@/components/BookCover";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-
 import Image from "next/image";
 
 const BookCard = ({
   id,
   title,
   genre,
-  color,
-  cover,
+  coverColor,
+  coverUrl,
+  pdfUrl,
   isLoanedBook = false,
-}: Book) => (
-  <li className={cn(isLoanedBook && "xs:w-52 w-full")}>
-    <Link
-      href={`/book/${id}`}
-      className={cn(isLoanedBook && "w-full flex flex-col items-center")}
+}: Book) => {
+  const router = useRouter(); // ✅ Use router for navigation
+
+  const handleClick = () => {
+    router.push(`/book/${id}`); // ✅ Redirect to book details page
+  };
+
+  return (
+    <li
+      className={cn("cursor-pointer", isLoanedBook && "xs:w-52 w-full")}
+      onClick={handleClick}
     >
-      <BookCover coverColor={color} coverImage={cover} />
-      <div className={cn("mt-4", !isLoanedBook && "xs:max-w-40 max-w-28")}>
-        <p className="book-title">{title}</p>
-        <p className="book-genre">{genre}</p>
+      <div className={cn(isLoanedBook && "w-full flex flex-col items-center")}>
+        <BookCover coverColor={coverColor} coverImage={coverUrl} />
+        <div className={cn("mt-4", !isLoanedBook && "xs:max-w-40 max-w-28")}>
+          <p className="book-title">{title}</p>
+          <p className="book-genre">{genre}</p>
+        </div>
       </div>
+
       {isLoanedBook && (
         <div className="mt-3 w-full">
           <div className="book-loaned">
@@ -36,11 +47,20 @@ const BookCard = ({
             />
             <p className="text-light-100">11 days left to return</p>
           </div>
-
           <Button className="book-btn text-dark-100">Download receipt</Button>
         </div>
       )}
-    </Link>
-  </li>
-);
+
+      {/* Download PDF Button */}
+      {pdfUrl && (
+        <a href={pdfUrl} download>
+          <Button className="text-black px-4 py-2 rounded mt-3 w-full">
+            Download PDF
+          </Button>
+        </a>
+      )}
+    </li>
+  );
+};
+
 export default BookCard;

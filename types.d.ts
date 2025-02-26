@@ -1,17 +1,18 @@
 interface Book {
-  id: number;
+  id: string;
   title: string;
   author: string;
   genre: string;
   rating: number;
-  total_copies: number;
-  available_copies: number;
+  totalCopies: number; // ✅ Changed to camelCase
+  availableCopies: number; // ✅ Changed to camelCase
   description: string;
-  color: string;
-  cover: string;
-  video: string;
+  coverColor: string;
+  coverUrl: string;
+  videoUrl: string;
+  pdfUrl: string;
   summary: string;
-  isLoanedBook?: boolean;
+  createdAt: Date | null;
 }
 
 interface AuthCredentials {
@@ -20,4 +21,23 @@ interface AuthCredentials {
   password: string;
   collegeId: string;
   collegeCard: string;
+}
+
+type BookParams = {
+  title: string;
+  author: string;
+  genre: string;
+  rating: number;
+  description: string;
+  summary: string;
+  totalCopies: number; // ✅ Ensuring correct type
+  coverUrl: string;
+  coverColor: string;
+  videoUrl: string;
+  pdfUrl: string; // ✅ Ensure this is a URL
+};
+
+interface BorrowBookParams {
+  bookId: string;
+  userId: string;
 }

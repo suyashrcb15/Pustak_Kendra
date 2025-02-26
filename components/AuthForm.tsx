@@ -22,7 +22,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import ImageUpload from "@/components/ImageUpload";
+import FileUpload from "@/components/FileUpload";
 import { toast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 
@@ -53,10 +53,9 @@ const AuthForm = <T extends FieldValues>({
   });
 
   const handleSubmit: SubmitHandler<T> = async (data) => {
-    // Ensure `collegeId` is a string before submission
     const formData = {
       ...data,
-      collegeId: String(data.collegeId),
+      collegeId: String(data.collegeId), // ✅ Convert number to string before submission
     };
 
     const result = await onSubmit(formData as T);
@@ -102,7 +101,7 @@ const AuthForm = <T extends FieldValues>({
             <FormField
               key={field}
               control={form.control}
-              name={field as keyof T}
+              name={field as keyof T & string} // ✅ Fix applied
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="capitalize">
@@ -110,10 +109,13 @@ const AuthForm = <T extends FieldValues>({
                   </FormLabel>
                   <FormControl>
                     {field.name === "collegeCard" ? (
-                      <ImageUpload
-                        onFileChange={(filePath) =>
-                          handleFileChange(filePath, field)
-                        }
+                      <FileUpload
+                        type="image"
+                        accept="image/*"
+                        placeholder="Upload Your College ID"
+                        folder="ids"
+                        variant="dark"
+                        onFileChange={field.onChange}
                       />
                     ) : (
                       <Input
