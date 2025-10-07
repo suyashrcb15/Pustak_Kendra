@@ -35,8 +35,6 @@ The easiest way to deploy your Next.js app is to use the [Render Platform](https
 
 ## Project Visuals
 
-## Project Visuals
-
 ### Project Dashboard
 ![Frontend UI](https://github.com/user-attachments/assets/749d214f-c14b-4963-9e8b-119682eb5daa)
 
