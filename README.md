@@ -31,6 +31,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Render
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://pustak-kendra-k68s.onrender.com/) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the [Render Platform](https://pustak-kendra-k68s.onrender.com/) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project Visuals
+
+Project DashBoard
+[Frontend UI](<img width="1920" height="1043" alt="Screenshot (7)" src="https://github.com/user-attachments/assets/749d214f-c14b-4963-9e8b-119682eb5daa" />
+)
+
+[Library Section](<img width="1920" height="1043" alt="Screenshot (8)" src="https://github.com/user-attachments/assets/7c63c4c6-53c5-41be-9fe9-55dc25f5f2be" />)
+
+[Free PDF to Read](<img width="1920" height="1048" alt="Screenshot (9)" src="https://github.com/user-attachments/assets/1cd6e527-673a-45e7-b343-410516f80d1b" />
+)
